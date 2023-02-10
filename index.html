@@ -1,8 +1,42 @@
-<html>
-    <title>KrazyKleb</title>
-    <meta content="KrazyKleb" property="og:title" />
-    <meta content="KrazyKleb's official website" property="og:description" />
-    <meta content="https://krazykleb.letz.dev" property="og:url" />
-    <meta content="https://avatars.githubusercontent.com/u/124646709?v=4" property="og:image" />
-    <meta content="#43B581" data-react-helmet="true" name="theme-color" />
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Light and Dark Mode</title>
+    <style>
+      body {
+        padding: 25px;
+        background-color: white;
+        color: black;
+        font-size: 20px;
+        transition: background-color 350ms ease-in-out, color 950ms ease-in-out;
+      }
+
+      #toggle {
+        border: 1px solid red;
+        border-radius: 50px;
+        padding: 10px;
+        font-family: cursive;
+        font-size: 15px;
+        cursor: pointer;
+      }
+      .dark-mode {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="toggle" onclick="changeMode()">Change Page Theme</button>
+    <h1>Tutorial to Toggle Between Light and Dark Mode</h1>
+    <h2>Using HTML, CSS & JavaScript</h2>
+    <script>
+      function changeMode() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+      }
+    </script>
+  </body>
 </html>
